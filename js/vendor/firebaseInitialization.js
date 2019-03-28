@@ -1,10 +1,14 @@
+const apiKey = process.env.FIREBAE_API_KEY;
+const messagingSenderId = process.env.FIREBASE_MESSAGING_SENDER_ID;
+const projectId = process.env.FIREBASE_PROJECT_ID;
+
 var config = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID.firebaseio.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGE_ID"
+  apiKey: apiKey,
+  authDomain: 'discover-funretro-61a4c.firebaseapp.com',
+  databaseURL: 'https://' + projectId + '.firebaseio.com',
+  projectId: projectId,
+  storageBucket: projectId + '.appspot.com',
+  messagingSenderId: messagingSenderId
 };
 
 firebase.initializeApp(config);
